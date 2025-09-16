@@ -1,0 +1,9 @@
+h1{
+    background:url('pexels-ken.jpg') no-repeat;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    animation: text 50s linear infinite;
+}
+@keyframes text {
+    0%{background-position:center;}
+}
