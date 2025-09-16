@@ -32,3 +32,77 @@ const stringLength = stringName.map(s => s.length);
 const stringFirstName = stringName.map(s => s[0]);
 console.log(stringLength);
 console.log(stringFirstName);
+
+
+// Use of forEach Method
+const numbers = [10, 20, 30, 410, 50, 60, 70, 80, 90, 100];
+const result = numbers.forEach(n => console.log(n));
+console.log(result);
+
+// Difference for map and forEach;
+/**
+ * Map return allow.
+ * forEach return not allow.
+ *
+ */
+
+// Use of Filter
+
+const fNumber = [70, 75, 60, 80, 65, 14, 50];
+const fResult = fNumber.filter(n => n >= 50);
+console.log(fResult);
+
+let friends = [];
+const fName = ['toma', 'aklima', 'juli', 'jula'];
+const fresult = fName.filter(n => n.length > 4);
+friends.push(fresult);
+console.log(fresult);
+console.log(friends);
+
+// use of find
+
+
+// use of findIndex
+const fdIndex = [10, 20, 60, 40, 90];
+const fdResult = fdIndex.findIndex(n => n > 50);
+const fdRt = fdIndex.findIndex(n => n > 60);
+console.log(fdRt);
+console.log(fdResult);
+
+//problem solve 1
+const shopStorage = [30, 45, 20, 60, 10]
+const spStIncrement = shopStorage.map(n => n + 13);
+console.log(spStIncrement);
+
+//problem solve 2
+const newItem = [];
+const listItems = ['Messi', 'Maradona', 'pele', 'Zidan', '[Ronaldo'];
+const findItem = listItems.filter(n => n.length > 5);
+newItem.push(findItem);
+console.log(newItem);
+
+// problem solve 3
+
+const nList = [10, 15, 20, 25, 30, 35];
+const listFilter = nList.filter(n => n > 20);
+console.log(listFilter);
+
+//problem solve 4
+const listHight = [65, 70, 68, 72, 68, 73];
+const findHight = listHight.filter(n => n > 69);
+console.log(findHight);
+
+//problem solve 5
+const n = [7, 10, 15, 20, 25, 30];
+const d = n.map(n => n / 3);
+console.log(d);
+
+// problem solve 6
+const friendsName = ['Leonardo', 'Bard Pitt', 'Kate Winslet', 'Audrey Hepburn', 'Johnny Depp'];
+const findName = friendsName.map(n => n[3]);
+console.log(findName);
+
+//problem solve 7
+const nm = ['Tom ', 'Harry', 'Sam', 'Jack'];
+const findN = nm.find(n => n.startsWith('H'));
+console.log(findN);
