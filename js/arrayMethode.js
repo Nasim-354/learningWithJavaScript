@@ -106,3 +106,72 @@ console.log(findName);
 const nm = ['Tom ', 'Harry', 'Sam', 'Jack'];
 const findN = nm.find(n => n.startsWith('H'));
 console.log(findN);
+
+
+// problem solve 7
+
+const numbers1 = [10.20, , 50, 6080, 100, 220];
+const finds = numbers1.some(check => check < 10);
+// console.log(finds);
+
+//problem solve 8
+
+const nums = [21, 40, 13, 60, 90, 44];
+const eDivs = nums.every(n => n % 5 == 0);
+console.log(eDivs);
+
+// let firstAdd = [];
+// let secondAdd = [];
+// const combination = [...firstAdd, ...secondAdd];
+
+// for (const value of nums) {
+//     if (value % 5 == 0) {
+//         firstAdd.push(value);
+//     }
+//     if (value % 5 > 0) {
+//         secondAdd.push(value);
+//     }
+//     // console.log(value);
+// }
+// const add1 = firstAdd.map(n => n + 100);
+// console.log(add1);
+// const add2 = secondAdd.map(n => n + 50);
+// console.log(add2);
+// console.log(combination);
+
+
+const num = [21, 40, 13, 60, 90, 44];
+let fPush = [];
+let sPush = [];
+for (const value of num) {
+    if (value % 5 == 0) {
+        fPush.push(value);
+    }
+    else {
+        sPush.push(value);
+    }
+}
+const firstAdd = fPush.map(n => n + 100);
+const secondAdd = sPush.map(n => n + 50);
+const newArray = firstAdd.concat(secondAdd);
+const shortValue = newArray.sort((a, b) => a - b);
+console.log(shortValue);
+
+// problem solve 9
+const words = ['jahid', 'hello', 'nahid'];
+const checkR = words.some(n => n === 'hello');
+console.log(checkR);
+
+// problem solve 10
+
+const age = [20, 36, 58, 20, 25];
+const Rs = age.every(e => e >= 18);
+console.log(Rs);
+
+//problem solve 11
+function stringN(name) {
+    const reverse = name.split('').reverse().join('')
+    const r = reverse.replace(/\*/g, '');
+    return r;
+}
+console.log(stringN('hell*o*'));
