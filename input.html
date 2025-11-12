@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Validation</title>
+</head>
+
+<body>
+    <h2>Enter Your Name</h2>
+
+    <!-- Input Field -->
+    <input type="text" id="nameField" placeholder="Enter your name">
+    <button onclick="checkName()">Check</button>
+
+    <!-- Result Display -->
+    <p id="result"></p>
+
+    <script>
+        // Your validation function
+        function single(myName) {
+            if (typeof !myName == 'string' || myName.trim() === '') {
+                return 'please provide a valid name';
+            }
+            return 'valid name';
+        }
+
+        // Function to get value from input and show result
+        function checkName() {
+            let nameInput = document.getElementById("nameField").value;
+            let result = single(nameInput);
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+
+</html>
