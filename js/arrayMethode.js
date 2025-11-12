@@ -175,3 +175,50 @@ function stringN(name) {
     return r;
 }
 console.log(stringN('hell*o*'));
+
+// problem solve 12
+
+const r = [10, 20, 30, 40, 50, 60, 70, 80, 90];
+let sum = 50;
+for (const num of r) {
+    sum = sum + num;
+}
+console.log(sum);
+
+// same problem solve reduce method.
+
+const sumAdd = r.reduce((sum, num) => sum + num, 0);
+console.log(sumAdd);
+
+const items = [
+    { id: 2, price: 100, name: 'USB' },
+    { id: 1, price: 500, name: 'cat-6' },
+    { id: 3, price: 150, name: 'light' },
+    { id: 4, price: 300, name: 'fun' }
+]
+
+const itemAdd = items.reduce((sum, num) => sum + num.price, 0);
+console.log(itemAdd);
+const itemCheck = items.filter((n) => n.price > 150);
+const itemName = items.map((n) => n.name[0]);
+const itemChecks = items.find((n) => n.price > 150);
+console.log(itemCheck);
+console.log(itemChecks);
+console.log(itemName);
+
+// 
+const aY = [5, 10, 15, 20, 25];
+const sAdd = aY.reduce((sum, num) => sum + num, 0);
+console.log(sAdd)
+
+for (i = 0; i < aY.length; i++) {
+    const res = aY[i] * 2;
+    console.log(res);
+}
+const re = aY.map(n => n * 2);
+console.log(re);
+for (const value of aY) {
+    const r = value * 2;
+    // confirm.log(r);
+    console.log(r);
+}
